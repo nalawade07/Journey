@@ -1,14 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+    <!-- /////////////////    Fonts     //////////////////// -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Freehand&family=Kaisei+Tokumin:wght@400;500;700&family=Limelight&family=Poppins:wght@300;400;500&family=Righteous&display=swap"
+        rel="stylesheet">
 
-    
+    <!-- /////////////////    Font Icon    //////////////////// -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="tours.css">
+    <title>Tours</title>
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="container">
+
+            <div class="logo">
+                <img src="images/logo_journey.png" alt="">
+            </div>
+
+
+            <form class="search_form" onclick="searchbttn()">
+                <div class="search_input">
+                    <input class="search_bar input" type="search" placeholder="Search Destination" aria-label="Search">
+                </div>
+
+                <div class="search_input">
+                    <input class="date_bar input" type="date" value="Month" placeholder="Month">
+                </div>
+
+                <div class="selct_right_border">
+                    <select id="" class="select_budget">
+                        <option value="Budget" select hidden> Budget </option>
+                        <option value="15000-20000">15000-20000</option>
+                        <option value="25000-30000">25000-30000</option>
+                        <option value="35000-40000">35000-40000</option>
+                        <option value="45000-50000">45000-50000</option>
+                    </select>
+                </div>
+                <button class="btn_search" type="submit"> <img src="images/search_bar_travel.png" class="" alt="">
+                </button>
+
+            </form>
+
+            <div class="burger" id="burger">
+                <img src="images/navbar_travel.png" alt="">
+            </div>
+
+            <div class="user_icon">
+                <i class='bx bx-user'></i>
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <ul class="ul_1" id="ul1_show">
+                <li class="user_nav">
+                    <i class='bx bx-user'></i>
+                    <a href="#">User</a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li id="list"><a href="#">Destination</a>
+                    <i class='bx bxs-down-arrow'></i>
+                    <ul class="ul_2" id="show">
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">London</a></li>
+                        <li><a href="#">Australia</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html">Tour</a></li>
+                <li><a href="index.html">Hotel</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="#footer">Help</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <div class="search_section">
+
+        <form action="" class="second_form" id="search_form">
+
+            <div class="close_nav" onclick="closebtn()">
+                <img src="images/close nav.png" alt="">
+            </div>
+
+            <h4 class="search_h4">Search your destination</h4>
+            <div class="search_inpu">
+                <input class="second_search_bar" type="search" placeholder="Search Destination">
+            </div>
+
+            <div class="search_inpu">
+                <input class="second_date_bar" type="text" placeholder="mm/dd/yy" onfocus="(this.type='date')">
+            </div>
+
+            <div class="selct_right_border">
+                <select id="" class="select_budget second_budget_bar">
+                    <option value="Budget" select hidden> Budget </option>
+                    <option value="15000-20000">15000-20000</option>
+                    <option value="25000-30000">25000-30000</option>
+                    <option value="35000-40000">35000-40000</option>
+                    <option value="45000-50000">45000-50000</option>
+                </select>
+            </div>
+            <button class="second_search_btn" type="submit"> Search </button>
+        </form>
+
+    </div>
+
+    <!-- ///////////////    Hero section     /////////////// -->
+
+    <div class="Hero_container">
+
+        <div class="filter_button">
+            <button id="filter_btn" onclick="filter_button()"> Filter </button>
+        </div>
+
+        <div class="container">
+            <div class="filter container_item_flex" id="filter_show">
+                <div class="filter_items">
+                    <div class="details">
+                        <h1>select Your tour</h1>
+                        <hr style="height:.1rem; color:rgba(221, 221, 221, 0.342);">
+                    </div>
+
+                    <div class="details">
+                        <h2>Packages type</h2>
+                        <div class="details_1">
+                            <button class="packg_bttn">Duo trip</button>
+                            <button class="packg_bttn">Group trip</button>
+                            <button class="packg_bttn">Costomized trip</button>
+                            <button class="packg_bttn">Family</button>
+                            <button class="packg_bttn">Inbound</button>
+                        </div>
+                        <hr style="height:.1rem; color:rgba(221, 221, 221, 0.445);">
+                    </div>
+
+                    <div class="details">
+                        <h2>Sort by</h2>
+                        <div class="details_2">
+                            <span class="price_box">
+                                <p> Price low to heigh </p> <input type="checkbox">
+                            </span>
+                            <span class="price_box">
+                                <p> Price height to low </p> <input type="checkbox">
+                            </span>
+                            <span class="price_box">
+                                <p> Duration short to long </p> <input type="checkbox">
+                            </span>
+                            <span class="price_box">
+                                <p> Duration short to long </p> <input type="checkbox">
+                            </span>
+                        </div>
+                        <hr style="height:.1rem; color:rgba(221, 221, 221, 0.445);">
+                    </div>
+
+
+                    <div class="details">
+                        <h2>Trip length</h2>
+                        <div class="details_2">
+                            <span class="price_box">
+                                <p> 10 days package </p> <input type="checkbox">
+                            </span>
+                            <span class="price_box">
+                                <p> 20 days package</p> <input type="checkbox">
+                            </span>
+                            <span class="price_box">
+                                <p> 30 days package</p> <input type="checkbox">
+                            </span>
+                            <span class="price_box">
+                                <p> 60 days package</p> <input type="checkbox">
+                            </span>
+                        </div>
+                        <hr style="height:.1rem; color:rgba(221, 221, 221, 0.445);">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tour_card_container container_item_flex">
+
+                <section class="tour_flex">
+                    <div class="tour_card">
+                        <div class="tour_img">
+                            <img src="images/statu_unity.webp" alt="">
+                        </div>
+                        <div class="intro_text">
+                            <h2>Statue of unity with narmada tent</h2>
+                            <div class="days">
+                                <p class="days">3<span>Days</span></p>
+                                <p class="days">2<span>Citys</span></p>
+                            </div>
+
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class='bx bxs-bowl-hot'></i> <span> Meals</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-camera'></i> <span> Sightseeing</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-hotel'></i> <span> Hotels</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-plane-alt'></i> <span> Flight</span>
+                                </div>
+                            </div>
+
+                            <div class="location">
+                                <span> <i class="fa-solid fa-location-dot"></i> ... London Highlights</span>
+
+                                <span>.... <i class="fa-solid fa-location-dot"></i> Leh Ladakh Nubra Pangong</span>
+                            </div>
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="super_deal">SUPER DEAL PRICE <p>(3 sept 2022)</p></span>
+                            <span class="card_price">₹ 25,000 <small>(Per person)</small></span>
+                        </div>
+                        <div class="book_btn">
+                        <a href="#" class="book">Book Now</a>
+                        <a href="#" class="view">View Details</a>
+                    </div>
+                    </div>
+
+                </section>
+
+
+                <section class="tour_flex">
+                    <div class="tour_card">
+                        <div class="tour_img">
+                            <img src="images/wagha_border.webp" alt="">
+                        </div>
+                        <div class="intro_text">
+                            <h2>Wagha Border Trip</h2>
+                            <div class="days">
+                                <p class="days">3<span>Days</span></p>
+                                <p class="days">2<span>Citys</span></p>
+                            </div>
+
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class='bx bxs-bowl-hot'></i> <span> Meals</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-camera'></i> <span> Sightseeing</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-hotel'></i> <span> Hotels</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-plane-alt'></i> <span> Flight</span>
+                                </div>
+                            </div>
+
+                            <div class="location">
+                                <span> <i class="fa-solid fa-location-dot"></i> ... London Highlights</span>
+
+                                <span>.... <i class="fa-solid fa-location-dot"></i> Leh Ladakh Nubra Pangong</span>
+                            </div>
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="super_deal">SUPER DEAL PRICE <p>(3 sept 2022)</p></span>
+                            <span class="card_price">₹ 20,000 <small>(Per person)</small></span>
+                        </div>
+                        <div class="book_btn">
+                        <a href="#" class="book">Book Now</a>
+                        <a href="#" class="view">View Details</a>
+                    </div>
+                    </div>
+
+                </section>
+
+                <section class="tour_flex">
+                    <div class="tour_card">
+                        <div class="tour_img">
+                            <img src="images/aridwar.webp" alt="">
+                        </div>
+                        <div class="intro_text">
+                            <h2>Haridwar Trip</h2>
+                            <div class="days">
+                                <p class="days">3<span>Days</span></p>
+                                <p class="days">2<span>Citys</span></p>
+                            </div>
+
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class='bx bxs-bowl-hot'></i> <span> Meals</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-camera'></i> <span> Sightseeing</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-hotel'></i> <span> Hotels</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-plane-alt'></i> <span> Flight</span>
+                                </div>
+                            </div>
+
+                            <div class="location">
+                                <span> <i class="fa-solid fa-location-dot"></i> ... London Highlights</span>
+
+                                <span>.... <i class="fa-solid fa-location-dot"></i> Leh Ladakh Nubra Pangong</span>
+                            </div>
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="super_deal">SUPER DEAL PRICE <p>(3 sept 2022)</p></span>
+                            <span class="card_price">₹ 35,000 <small>(Per person)</small></span>
+                        </div>
+                        <div class="book_btn">
+                        <a href="#" class="book">Book Now</a>
+                        <a href="#" class="view">View Details</a>
+                    </div>
+                    </div>
+
+                </section>
+
+                <section class="tour_flex">
+                    <div class="tour_card">
+                        <div class="tour_img">
+                            <img src="images/pexels-asad-photo-maldives-1591373.jpg" alt="">
+                        </div>
+                        <div class="intro_text">
+                            <h2>Goa Trip</h2>
+                            <div class="days">
+                                <p class="days">3<span>Days</span></p>
+                                <p class="days">2<span>Citys</span></p>
+                            </div>
+
+                            <div class="icons">
+                                <div class="icon1">
+                                    <i class='bx bxs-bowl-hot'></i> <span> Meals</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-camera'></i> <span> Sightseeing</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-hotel'></i> <span> Hotels</span>
+                                </div>
+                                <div class="icon1">
+                                    <i class='bx bxs-plane-alt'></i> <span> Flight</span>
+                                </div>
+                            </div>
+
+                            <div class="location">
+                                <span> <i class="fa-solid fa-location-dot"></i> ... London Highlights</span>
+
+                                <span>.... <i class="fa-solid fa-location-dot"></i> Leh Ladakh Nubra Pangong</span>
+                            </div>
+
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="price">
+                            <span class="super_deal">SUPER DEAL PRICE <p>(3 sept 2022)</p></span>
+                            <span class="card_price">₹ 40,000 <small>(Per person)</small></span>
+                        </div>
+                        <div class="book_btn">
+                        <a href="#" class="book">Book Now</a>
+                        <a href="#" class="view">View Details</a>
+                    </div>
+                    </div>
+
+                </section>
+
+            </div>
+            
+        </div>
+        </div>
+        
+  <!-- ////////////  footer    /////////////// -->
+
+
+  <footer id="footer">
+
+    <div class="footer_container">
+
+      <div class="links_footer">
+        <li><a href="index.html"> Home</li></a>
+        <li><a href="index.html"> Exclusive</li></a>
+        <li><a href="index.html"> Tours</li></a>
+        <li><a href="index.html"> Hotels</li></a>
+        <li><a href="index.html"> About</li></a>
+      </div>
+
+      <div class="footer_address">
+        <div class="addres_1">
+          <p>Address :-</p>
+          <span>Mumbai(west) 4000849</span>
+        </div>
+
+        <div class="addres_1">
+          <p>Call Now :-</p>
+          <span>1800239(9300)</span>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- //////////  js  ///////// -->
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('#list').click(function () {
+                $('#show').toggle();
+            })
+
+            $('#burger').click(function () {
+                $('#ul1_show').slideToggle(1000);
+            })
+
+            $('#search_bttn').click(function () {
+                $('#search_form').toggle();
+            })
+
+        });
+
+
+        var form = document.getElementById('search_form');
+
+        function searchbttn() {
+            search_form.classList.add('active');
+        }
+
+        function closebtn() {
+            search_form.classList.remove('active');
+        }
+
+
+        var filter = document.getElementById('filter_show');
+
+        function filter_button(){
+            filter.classList.toggle('active');
+        }
+
+// /////////  range  /////////
+
+        // var slider = document.getElementById('slider');
+        // var select_value = document.getElementById('select_value');
+        // var selector = document.getElementById('selector');
+        // select_value.innerHTML = slider.value;
+        // slider.oninput = function(){
+        //     select_value.style.innerHTML = this.value;
+        //     selector.style.left = this.value + "%";
+        // }
+
+
+    </script>
+
 </body>
+
 </html>

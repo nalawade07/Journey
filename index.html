@@ -1,581 +1,584 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <!-- /////////////////    Fonts     //////////////////// -->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link
-     href="https://fonts.googleapis.com/css2?family=Freehand&family=Kaisei+Tokumin:wght@400;500;700&family=Limelight&family=Poppins:wght@300;400;500&family=Righteous&display=swap"
-     rel="stylesheet">
+  <!-- /////////////////    Fonts     //////////////////// -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Freehand&family=Kaisei+Tokumin:wght@400;500;700&family=Limelight&family=Poppins:wght@300;400;500&family=Righteous&display=swap"
+    rel="stylesheet">
 
-       <!-- /////////////////    Font Icon    //////////////////// -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-       integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-       crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- /////////////////    Font Icon    //////////////////// -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-   <link rel="stylesheet" href="style.css">
-    <title>Tours And Travels</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Tours And Travels</title>
 </head>
+
 <body>
-    
-<header>
 
-<div class="container">
-    
-<div class="logo">
-    <img src="images/logo_journey.png" alt="">
-</div>
+  <header>
 
+    <div class="container">
 
-<form class="search_form" onclick="searchbttn()" >
-    <div class="search_input">
-      <input class="search_bar input" type="search" placeholder="Search Destination" aria-label="Search">
-    </div>
-
-    <div class="search_input">
-      <input class="date_bar input" type="date" value="Month" placeholder="Month">
-    </div>
-
-    <div class="selct_right_border">
-      <select id="" class="select_budget">
-        <option value="Budget" select hidden> Budget </option>
-        <option value="15000-20000">15000-20000</option>
-        <option value="25000-30000">25000-30000</option>
-        <option value="35000-40000">35000-40000</option>
-        <option value="45000-50000">45000-50000</option>
-      </select>
-    </div>
-     <button class="btn_search"type="submit"> <img src="images/search_bar_travel.png" class="" alt=""> </button>
-
-  </form>
-
-<div class="burger" id="burger">
-    <img src="images/navbar_travel.png" alt="">
-</div>
-
-  <div class="user_icon">
-    <i class='bx bx-user'></i>
-  </div>
-
-</div>
-
-
-  <nav>
-
-<ul class="ul_1" id="ul1_show">
-    <li class="user_nav">
-    <i class='bx bx-user'></i>
-        <a href="#">User</a>
-    </li>
-    <li><a href="#home">Home</a></li>
-    <li id="list"><a href="#">Destination</a>
-      <i class='bx bxs-down-arrow'></i>
-    <ul class="ul_2" id="show">
-        <li><a href="#">India</a></li>
-        <li><a href="#">London</a></li>
-        <li><a href="#">Australia</a></li>
-    </ul>
-    </li>
-    <li><a href="#tour">Tour</a></li>
-    <li><a href="#hotel">Hotel</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#footer">Help</a></li>
-
-</ul>
-
-  </nav>
-
-</header>
-
-
-<div class="search_section">
-
-<form action="" class="second_form" id="search_form">
-
-  <div class="close_nav" onclick="closebtn()" > 
-    <img src="images/close nav.png"alt=""> 
-  </div>
-
-  <h4 class="search_h4">Search your destination</h4>
-  <div class="search_inpu">
-    <input class="second_search_bar" type="search" placeholder="Search Destination">
-  </div>
-
-  <div class="search_inpu">
-    <input class="second_date_bar" type="text" placeholder="mm/dd/yy" onfocus="(this.type='date')">
-  </div>
-
-  <div class="selct_right_border">
-    <select id="" class="select_budget second_budget_bar">
-      <option value="Budget" select hidden> Budget </option>
-      <option value="15000-20000">15000-20000</option>
-      <option value="25000-30000">25000-30000</option>
-      <option value="35000-40000">35000-40000</option>
-      <option value="45000-50000">45000-50000</option>
-    </select>
-  </div>
-   <button class="second_search_btn" type="submit"> Search </button>
-</form>
-
-</div>
-
-<!-- ///////////////    Hero section     /////////////// -->
-
-
-<section>
-
-<div class="bg_container" id="home">
-  <div class="overly">
-    <div class="text">
-    <h1>
-      TOURS <span> And </span> TRAVELS <span>. </span>
-    </h1>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis asperiores quia 
-      deserunt voluptatem dolore consequatur magni, sed doloribus quas
-      earum in voluptas nisi repellendus eveniet facere sit iste dignissimos.
-    </p>
-
-    <div class="bttn_explore">
-     <a href="#exclusive"> <button class="exp">Explore</button> </a>
-    </div>
-
-  </div>
-
-  </div>
-</div>
-
-</section>
-
-
-<!-- ///////////////    Destination section     /////////////// -->
-
-
-<section class="destination" id="exclusive">
-
-  <div class="name">
-<h2>Exclusive</h2>
-</div>
-
-<div class="container_desti">
-
-  <div class="desti1">
-    <h3>Explore Now</h3>
-    <div class="img">
-      <img src="images/exclusiv 1.jpg" alt="">
-    </div>
-
-    <div class="text_desti">
-      <h3>Maldives <br> tour 30% off</h3>
-    </div>
-  </div>
-
-
-  <div class="desti1">
-    <h3>Explore Now</h3>
-
-    <div class="img">
-      <img src="images/exclusiv 2.jpg" alt="">
-    </div>
-
-    <div class="text_desti">
-      <h3>New York <br> tour 30% off</h3>
-    </div>
-  </div>
-
-  <div class="desti1">
-    <h3>Explore Now</h3>
-
-    <div class="img">
-      <img src="images/exclusiv 3.jpg" alt="">
-    </div>
-
-    <div class="text_desti">
-      <h3>India <br> tour 30% off</h3>
-    </div>
-  </div>
-
-  <div class="desti1">
-    <h3>Explore Now</h3>
-
-    <div class="img">
-      <img src="images/exclusive 4.jpg" alt="">
-    </div>
-
-    <div class="text_desti">
-      <h3>London <br> tour 30% off</h3>
-    </div>
-  </div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- ////////////   tour    /////////////// -->
-
-
-<section class="tour" id="tour">
-
-  <div class="name">
-<h2>Tour places</h2>
-</div>
-
-<div class="tour_container">
-
-<div class="tour_place">
-  <div class="tour_img">
-    <div class="overly_tour">
-    <img src="images/paris.png" alt="">
-    </div>
-  </div>
-
-  <div class="tour_text">
-  <h3>Summer Holiday</h3>
-  
-  <div class="text1">
-    <span> <i class="fa-solid fa-location-dot"></i>.... Kerala Highlights</span> 
-    <p> Starts from ₹ 30,000 </p>
-  </div>
-
-    <div class="text1">
-    <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span> 
-    <p> Starts from ₹ 56,000 </p>
-  </div>
-  <a href="#"> View More </a>
-</div>
-
-</div>
-
-
-<div class="tour_place">
-  <div class="tour_img">
-    <div class="overly_tour">
-    <img src="images/pexels-asad-photo-maldives-1450361.jpg" alt="">
-    </div>
-  </div>
-  <div class="tour_text">
-  <h3>Family Tour</h3>
-
-  <div class="text1">
-    <span><i class="fa-solid fa-location-dot"></i>.... Maldives Highlights</span> 
-    <p> Starts from ₹ 30,000 </p>
-  </div>
-
-    <div class="text1">
-    <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span> 
-    <p> Starts from ₹ 56,000 </p>
-  </div>
-  <a href="#"> View More </a>
-</div>
-
-</div>
-
-
-
-
-<div class="tour_place">
-  <div class="tour_img">
-    <div class="overly_tour">
-    <img src="images/new-york.png" alt="">
-    </div>
-  </div>
-
-  <div class="tour_text">
-  <h3>Popular Package</h3>
-
-  <div class="text1">
-    <span> <i class="fa-solid fa-location-dot"></i>.... New york Highlights</span> 
-    <p> Starts from ₹ 30,000 </p>
-  </div>
-
-    <div class="text1">
-    <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span> 
-    <p> Starts from ₹ 56,000 </p>
-  </div>
-  <a href="#"> View More </a>
-
-</div>
-
-</div>
-
-
-
-<div class="tour_place">
-  <div class="tour_img">
-    <div class="overly_tour">
-    <img src="images/image-1.png" alt="">
-    </div>
-  </div>
-
-  <div class="tour_text">
-  <h3>Honeymoon package</h3>
-
-  <div class="text1">
-    <span> <i class="fa-solid fa-location-dot"></i>.... London Highlights</span> 
-    <p> Starts from ₹ 30,000 </p>
-  </div>
-
-    <div class="text1">
-    <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span> 
-    <p> Starts from ₹ 56,000 </p>
-  </div>
-  <a href="#"> View More </a>
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ////////////   Hotel    /////////////// -->
-
-
-<section class="hotel" id="hotel">
-
-  <div class="name">
-<h2>Stay facility</h2>
-</div>
-
-<div class="hotel_container">
-
-<div class="stay_fac">
-  <div class="stay_img">
-    <img src="images/house-1.png" alt="">
-  </div>
-  <h3>
-    <div class="stars_book">
-    <div class="star"><i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-star-half"></i>
-    </div>
-       <a href="#"> Book Now </a>
+      <div class="logo">
+        <img src="images/logo_journey.png" alt="">
       </div>
 
-</h3>
 
-</div>
-
-<div class="stay_fac">
-  <div class="stay_img">
-    <img src="images/house-4.png" alt="">
-  </div>
-  <h3>
-    <div class="stars_book">
-      <div class="star"><i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star-half"></i>
-      </div>
-         <a href="#"> Book Now </a>
+      <form class="search_form" onclick="searchbttn()">
+        <div class="search_input">
+          <input class="search_bar input" type="search" placeholder="Search Destination" aria-label="Search">
         </div>
-  </h3>
 
-</div>
-
-
-<div class="stay_fac">
-  <div class="stay_img">
-    <img src="images/house-2.png" alt="">
-  </div>
-  <h3>
-    <div class="stars_book">
-      <div class="star"><i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star-half"></i>
-      </div>
-         <a href="#"> Book Now </a>
-        </div> 
-    </h3>
-
-</div>
-
-
-<div class="stay_fac">
-  <div class="stay_img">
-    <img src="images/house-3.png" alt="">
-  </div>
-  <h3>
-    <div class="stars_book">
-      <div class="star">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star-half"></i>
-      </div>
-         <a href="#"> Book Now </a>
+        <div class="search_input">
+          <input class="date_bar input" type="date" value="Month" placeholder="Month">
         </div>
-    </h3>
 
-</div>
+        <div class="selct_right_border">
+          <select id="" class="select_budget">
+            <option value="Budget" select hidden> Budget </option>
+            <option value="15000-20000">15000-20000</option>
+            <option value="25000-30000">25000-30000</option>
+            <option value="35000-40000">35000-40000</option>
+            <option value="45000-50000">45000-50000</option>
+          </select>
+        </div>
+        <button class="btn_search" type="submit"> <img src="images/search_bar_travel.png" class="" alt=""> </button>
+
+      </form>
+
+      <div class="burger" id="burger">
+        <img src="images/navbar_travel.png" alt="">
+      </div>
+
+      <div class="user_icon">
+        <i class='bx bx-user'></i>
+      </div>
+
+    </div>
 
 
-</div>
+    <nav>
+
+      <ul class="ul_1" id="ul1_show">
+        <li class="user_nav">
+          <i class='bx bx-user'></i>
+          <a href="#">User</a>
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li id="list"><a href="#">Destination</a>
+          <i class='bx bxs-down-arrow'></i>
+          <ul class="ul_2" id="show">
+            <li><a href="#">India</a></li>
+            <li><a href="#">London</a></li>
+            <li><a href="#">Australia</a></li>
+          </ul>
+        </li>
+        <li><a href="#tour">Tour</a></li>
+        <li><a href="#hotel">Hotel</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#footer">Help</a></li>
+
+      </ul>
+
+    </nav>
+
+  </header>
 
 
-</section>
+  <div class="search_section">
 
+    <form action="" class="second_form" id="search_form">
 
+      <div class="close_nav" onclick="closebtn()">
+        <img src="images/close nav.png" alt="">
+      </div>
 
-<!-- ////////////   About us    /////////////// -->
+      <h4 class="search_h4">Search your destination</h4>
+      <div class="search_inpu">
+        <input class="second_search_bar" type="search" placeholder="Search Destination">
+      </div>
 
+      <div class="search_inpu">
+        <input class="second_date_bar" type="text" placeholder="mm/dd/yy" onfocus="(this.type='date')">
+      </div>
 
-<section class="about" id="about">
+      <div class="selct_right_border">
+        <select id="" class="select_budget second_budget_bar">
+          <option value="Budget" select hidden> Budget </option>
+          <option value="15000-20000">15000-20000</option>
+          <option value="25000-30000">25000-30000</option>
+          <option value="35000-40000">35000-40000</option>
+          <option value="45000-50000">45000-50000</option>
+        </select>
+      </div>
+      <button class="second_search_btn" type="submit"> Search </button>
+    </form>
 
-  <div class="name">
-<h2>About us</h2>
-</div>
-
-<div class="about_container">
-
-  <div class="about_us">
-  <div class="about_img">
-    <img src="images/bestPractice.svg" alt="">
   </div>
 
-  <div class="about_text">
-    <h2> Affordable Journeys </h2>
-    <p>
-      We strive to make the world accessible for each and every one!
-    </p>
-  </div>
-
-</div>
+  <!-- ///////////////    Hero section     /////////////// -->
 
 
-<div class="about_us">
-  <div class="about_img">
-    <img src="images/guidTour.svg" alt="">
-  </div>
-  <div class="about_text">
-    <h2> Guided Experiences </h2>
-    <p>
-      Hassle free journeys with the expertise of our in-house Tour Managers.
-    </p>
-  </div>
-</div>
+  <section>
 
-<div class="about_us">
-  <div class="about_img">
-    <img src="images/inclusive.svg" alt="">
-  </div>
-  <div class="about_text">
-    <h2> All Inclusive </h2>
-    <p>
-      Comfortable stay & transport, delicious meals and abundant sightseeing on every tour
-    </p>
-  </div>
-</div>
+    <div class="bg_container" id="home">
+      <div class="overly">
+        <div class="text">
+          <h1>
+            TOURS <span> And </span> TRAVELS <span>. </span>
+          </h1>
 
-<div class="about_us">
-  <div class="about_img">
-    <img src="images/customerSuprt.svg" alt="">
-  </div>
-  <div class="about_text">
-    <h2> Guest Support </h2>
-    <p>
-      We are happy to help you! Call us at 180079 or write to us at
-    </p>
-  </div>
-</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, corporis asperiores quia
+            deserunt voluptatem dolore consequatur magni, sed doloribus quas
+            earum in voluptas nisi repellendus eveniet facere sit iste dignissimos.
+          </p>
+
+          <div class="bttn_explore">
+            <a href="#exclusive"> <button class="exp">Explore</button> </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
 
-</div>
+  <!-- ///////////////    Destination section     /////////////// -->
 
 
-</section>
+  <section class="destination" id="exclusive">
+
+    <div class="name">
+      <h2>Exclusive</h2>
+    </div>
+
+    <div class="container_desti">
+
+      <div class="desti1">
+        <h3>Explore Now</h3>
+        <div class="img">
+          <img src="images/exclusiv 1.jpg" alt="">
+        </div>
+
+        <div class="text_desti">
+          <h3>Maldives <br> tour 30% off</h3>
+        </div>
+      </div>
+
+
+      <div class="desti1">
+        <h3>Explore Now</h3>
+
+        <div class="img">
+          <img src="images/exclusiv 2.jpg" alt="">
+        </div>
+
+        <div class="text_desti">
+          <h3>New York <br> tour 30% off</h3>
+        </div>
+      </div>
+
+      <div class="desti1">
+        <h3>Explore Now</h3>
+
+        <div class="img">
+          <img src="images/exclusiv 3.jpg" alt="">
+        </div>
+
+        <div class="text_desti">
+          <h3>India <br> tour 30% off</h3>
+        </div>
+      </div>
+
+      <div class="desti1">
+        <h3>Explore Now</h3>
+
+        <div class="img">
+          <img src="images/exclusive 4.jpg" alt="">
+        </div>
+
+        <div class="text_desti">
+          <h3>London <br> tour 30% off</h3>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
 
 
 
-<!-- ////////////  footer    /////////////// -->
+  <!-- ////////////   tour    /////////////// -->
 
 
-<footer id="footer">
+  <section class="tour" id="tour">
 
-<div class="footer_container">
+    <div class="name">
+      <h2>Tour places</h2>
+    </div>
 
-<div class="links_footer">
-  <li><a href="#home"> Home</li></a>
-  <li><a href="#exclusive"> Exclusive</li></a>
-  <li><a href="#tour"> Tours</li></a>
-  <li><a href="#hotel"> Hotels</li></a>
-  <li><a href="#about"> About</li></a>
-</div>
+    <div class="tour_container">
 
-<div class="footer_address">
-  <div class="addres_1">
-  <p>Address :-</p>
-  <span>Mumbai(west) 4000849</span>
-</div>
+      <div class="tour_place">
+        <div class="tour_img">
+          <div class="overly_tour">
+            <img src="images/paris.png" alt="">
+          </div>
+        </div>
 
-<div class="addres_1">
-  <p>Call Now :-</p>
-  <span>1800239(9300)</span>
-</div>
+        <div class="tour_text">
+          <h3>Summer Holiday</h3>
 
-</div>
+          <div class="text1">
+            <span> <i class="fa-solid fa-location-dot"></i>.... Kerala Highlights</span>
+            <p> Starts from ₹ 30,000 </p>
+          </div>
 
+          <div class="text1">
+            <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span>
+            <p> Starts from ₹ 56,000 </p>
+          </div>
+          <a href="tours.html"> View More </a>
+        </div>
 
-</div>
-
-</footer>
-
-
-
-
+      </div>
 
 
+      <div class="tour_place">
+        <div class="tour_img">
+          <div class="overly_tour">
+            <img src="images/pexels-asad-photo-maldives-1450361.jpg" alt="">
+          </div>
+        </div>
+        <div class="tour_text">
+          <h3>Family Tour</h3>
 
-<script src="jquery.js"></script>
+          <div class="text1">
+            <span><i class="fa-solid fa-location-dot"></i>.... Maldives Highlights</span>
+            <p> Starts from ₹ 30,000 </p>
+          </div>
 
-<script>
+          <div class="text1">
+            <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span>
+            <p> Starts from ₹ 56,000 </p>
+          </div>
+          <a href="tours.html"> View More </a>
+        </div>
 
-$(document).ready(function(){
+      </div>
 
-    $('#list').click(function(){
+
+
+
+      <div class="tour_place">
+        <div class="tour_img">
+          <div class="overly_tour">
+            <img src="images/new-york.png" alt="">
+          </div>
+        </div>
+
+        <div class="tour_text">
+          <h3>Popular Package</h3>
+
+          <div class="text1">
+            <span> <i class="fa-solid fa-location-dot"></i>.... New york Highlights</span>
+            <p> Starts from ₹ 30,000 </p>
+          </div>
+
+          <div class="text1">
+            <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span>
+            <p> Starts from ₹ 56,000 </p>
+          </div>
+          <a href="tours.html"> View More </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="tour_place">
+        <div class="tour_img">
+          <div class="overly_tour">
+            <img src="images/image-1.png" alt="">
+          </div>
+        </div>
+
+        <div class="tour_text">
+          <h3>Honeymoon package</h3>
+
+          <div class="text1">
+            <span> <i class="fa-solid fa-location-dot"></i>.... London Highlights</span>
+            <p> Starts from ₹ 30,000 </p>
+          </div>
+
+          <div class="text1">
+            <span> <i class="fa-solid fa-location-dot"></i>.... Leh Ladakh Nubra Pangong</span>
+            <p> Starts from ₹ 56,000 </p>
+          </div>
+          <a href="tours.html"> View More </a>
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ////////////   Hotel    /////////////// -->
+
+
+  <section class="hotel" id="hotel">
+
+    <div class="name">
+      <h2>Stay facility</h2>
+    </div>
+
+    <div class="hotel_container">
+
+      <div class="stay_fac">
+        <div class="stay_img">
+          <img src="images/house-1.png" alt="">
+        </div>
+        <h3>
+          <div class="stars_book">
+            <div class="star"><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <a href="#"> Book Now </a>
+          </div>
+
+        </h3>
+
+      </div>
+
+      <div class="stay_fac">
+        <div class="stay_img">
+          <img src="images/house-4.png" alt="">
+        </div>
+        <h3>
+          <div class="stars_book">
+            <div class="star"><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <a href="#"> Book Now </a>
+          </div>
+        </h3>
+
+      </div>
+
+
+      <div class="stay_fac">
+        <div class="stay_img">
+          <img src="images/house-2.png" alt="">
+        </div>
+        <h3>
+          <div class="stars_book">
+            <div class="star"><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <a href="#"> Book Now </a>
+          </div>
+        </h3>
+
+      </div>
+
+
+      <div class="stay_fac">
+        <div class="stay_img">
+          <img src="images/house-3.png" alt="">
+        </div>
+        <h3>
+          <div class="stars_book">
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <a href="#"> Book Now </a>
+          </div>
+        </h3>
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ////////////   About us    /////////////// -->
+
+
+  <section class="about" id="about">
+
+    <div class="name">
+      <h2>About us</h2>
+    </div>
+
+    <div class="about_container">
+
+      <div class="about_us">
+        <div class="about_img">
+          <img src="images/bestPractice.svg" alt="">
+        </div>
+
+        <div class="about_text">
+          <h2> Affordable Journeys </h2>
+          <p>
+            We strive to make the world accessible for each and every one!
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="about_us">
+        <div class="about_img">
+          <img src="images/guidTour.svg" alt="">
+        </div>
+        <div class="about_text">
+          <h2> Guided Experiences </h2>
+          <p>
+            Hassle free journeys with the expertise of our in-house Tour Managers.
+          </p>
+        </div>
+      </div>
+
+      <div class="about_us">
+        <div class="about_img">
+          <img src="images/inclusive.svg" alt="">
+        </div>
+        <div class="about_text">
+          <h2> All Inclusive </h2>
+          <p>
+            Comfortable stay & transport, delicious meals and abundant sightseeing on every tour
+          </p>
+        </div>
+      </div>
+
+      <div class="about_us">
+        <div class="about_img">
+          <img src="images/customerSuprt.svg" alt="">
+        </div>
+        <div class="about_text">
+          <h2> Guest Support </h2>
+          <p>
+            We are happy to help you! Call us at 180079 or write to us at
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ////////////  footer    /////////////// -->
+
+
+  <footer id="footer">
+
+    <div class="footer_container">
+
+      <div class="links_footer">
+        <li><a href="#home"> Home</li></a>
+        <li><a href="#exclusive"> Exclusive</li></a>
+        <li><a href="#tour"> Tours</li></a>
+        <li><a href="#hotel"> Hotels</li></a>
+        <li><a href="#about"> About</li></a>
+      </div>
+
+      <div class="footer_address">
+        <div class="addres_1">
+          <p>Address :-</p>
+          <span>Mumbai(west) 4000849</span>
+        </div>
+
+        <div class="addres_1">
+          <p>Call Now :-</p>
+          <span>1800239(9300)</span>
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+
+
+
+
+  <script src="jquery.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+
+      $('#list').click(function () {
         $('#show').toggle();
-    })
+      })
 
-$('#burger').click(function(){
-    $('#ul1_show').slideToggle(1000);
-})
+      $('#burger').click(function () {
+        $('#ul1_show').slideToggle(1000);
+      })
 
-$('#search_bttn').click(function(){
-$('#search_form').toggle();
-})
+      $('#search_bttn').click(function () {
+        $('#search_form').toggle();
+      })
 
-});
-
-
-var form = document.getElementById('search_form');
-
-function searchbttn(){
-  search_form.classList.add('active');
-}
-
-function closebtn(){
-  search_form.classList.remove('active');
-}
+    });
 
 
-</script>
+    var form = document.getElementById('search_form');
+
+    function searchbttn() {
+      search_form.classList.add('active');
+    }
+
+    function closebtn() {
+      search_form.classList.remove('active');
+    }
+
+
+  </script>
 
 </body>
+
 </html>
