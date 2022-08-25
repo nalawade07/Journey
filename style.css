@@ -373,7 +373,7 @@ font-family: var(--popinsfont);
 }
 .bttn_explore{
     border-left:3px solid var(--yellow);
-    /* border-right:3px solid var(--yellow); */
+    border-right:3px solid var(--yellow);
     margin-top:2rem;
 }
 
