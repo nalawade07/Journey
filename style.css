@@ -555,9 +555,11 @@ font-family: var(--popinsfont);
     font-size: 1rem;
     letter-spacing:1px;
     font-weight:400;
+        padding:0rem 6rem;
     font-family: var(--popinsfont);
 }
 .tour_place button {
+    text-align: center;
 width:100%;
 outline:none;
 border: none;
