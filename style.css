@@ -1192,7 +1192,7 @@ background-color:var(--lightgrey);
     left:30%;
 }
 .desti1{
-    width:98%;
+    width:95%;
 }
 
 
@@ -1220,7 +1220,7 @@ grid-column-gap:.4rem;
     text-align: center;
     padding-bottom:.3rem;
     border: none;
-    width:98%;
+    width:95%;
 }
 .tour_place .tour_text h3{
     font-size:1.4rem;
@@ -1241,7 +1241,7 @@ width:100%;
 height:190px;
 }
 .stay_fac{
-    width:98%;
+    width:95%;
 }
 
 .stay_fac h3 a{
